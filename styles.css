@@ -3,10 +3,8 @@
     padding: 0;
 }
 body {
-    height: clamp(200px, 100vh, 1000px);
-    width: clamp(390px, 100vw, 1250px);
-    /* min-height: 100vh; */
-    background: #f7f2fd;
+    min-height: 100vh;
+    background: #e4d4f9fd;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,10 +15,10 @@ body {
     width: 100vw;
     position: relative;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-   /* border: 2px solid red; */
+    gap: 20px;
 }
 
 .container .card {
@@ -29,15 +27,14 @@ body {
 }
 
 .container .card .face {
-    width: 370px;
-    height: 200px;
+    width: 300px;
+    height: 247px;
     transition: .5s;
-    /* gap: 20px; */
 }
 
 .container .card .face.face1{
     position: relative;
-    background: #f7f2fd;
+    background: #e4d4f9fd;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,16 +43,63 @@ body {
 }
 
 .container .card:hover .face.face1 {
-    background: #fdad52;
+    background: rgb(253, 77, 106);
     transform: translateY(0);
     border-radius: 9px;
 }
 
 .container .card .face.face1 .content {
-    opacity: .7;
+    opacity: .8;
     transition: .5s;
 }
+.container .card:hover .face.face1 .content {
+    opacity: 1;
+}
 
+.container .card .face.face1 .content img {
+    max-width: 100px;
+}
+.container .card .face.face1 .content h3 {
+    margin: 10px 0 0;   
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.3rem;
+}
+.container .card .face.face2 {
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2 {
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content p {
+    padding: 0;
+    margin: 0;
+}
+.container .card .face.face2 .content a {
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+.container .card .face.face2 .content a:hover {
+    background: #cfb7f0fd;
+    color: #000;
+    transition: .5s;
+}
 
 
 
